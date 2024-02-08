@@ -2,20 +2,23 @@
 import AppHeader from './components/appHeader.vue';
 import AppMain from './components/appMain.vue';
 import AppFooter from './components/appFooter.vue';
+import card from './components/card.vue'
 export default{
     data(){
         return {
 
         };
     },
-    components : {AppHeader,AppMain,AppFooter }
+    components : {AppHeader,AppMain,AppFooter}
 };
 
 </script>
 
 <template>
   <AppHeader></AppHeader>
-  <AppMain></AppMain>
+  <AppMain>
+    <card></card>
+  </AppMain>
   <AppFooter></AppFooter>
 </template>
 
