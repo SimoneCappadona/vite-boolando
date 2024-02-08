@@ -9,17 +9,15 @@ export default{
 
         };
     },
-    components : {AppHeader,AppMain,AppFooter}
+    components : {AppHeader,AppMain,AppFooter,card}
 };
 
 </script>
 
 <template>
-  <AppHeader></AppHeader>
-  <AppMain>
-    <card></card>
-  </AppMain>
-  <AppFooter></AppFooter>
+  <AppHeader />
+  <AppMain />
+  <AppFooter />
 </template>
 
 <style lang="scss">
