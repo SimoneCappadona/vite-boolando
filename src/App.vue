@@ -2,14 +2,14 @@
 import AppHeader from './components/appHeader.vue';
 import AppMain from './components/appMain.vue';
 import AppFooter from './components/appFooter.vue';
-import card from './components/card.vue';
+import appCard from './components/appCard.vue';
 export default{
     data(){
         return {
 
         };
     },
-    components : {AppHeader,AppMain,AppFooter,card}
+    components : {AppHeader,AppMain,AppFooter,appCard}
 };
 
 </script>

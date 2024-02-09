@@ -13,7 +13,7 @@ export default {
     <nav class="navbar">
         <div class="header container">
             <ul class="menu">
-                <li v-for="(gender, index) in genders"> <a href="#">{{ gender }}</a></li>   
+                <li v-for="(genders, index) in genders"> <a href="#">{{ genders }}</a></li>   
             </ul>
             <img class="logo" src="../assets/img/boolean-logo.png" alt="">
             <div class="icons">
@@ -27,7 +27,7 @@ export default {
 
 
 <style lang="scss" scoped>
-@use '../style/particles/variables.scss' as *;
+@use '../style/partials/variables.scss' as *;
 
 .navbar{
   background-color: $main-color;
@@ -56,13 +56,13 @@ export default {
 
 .logo{
   width: 150px;
-  align-items: center;
 }
 
 .icons{
   display: flex;
   gap: 15px;
   color: $font-color;
+  font-size: 20px;
   
 }
 
