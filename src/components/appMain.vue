@@ -3,10 +3,7 @@ import appCard from './appCard.vue'
 
 export default {
     components:{ appCard },
-      data() {
-        return {
-        }
-      }
+      props: {brands: Array}
     }
 </script>
 
@@ -15,7 +12,7 @@ export default {
      <div class="main">
         <div class="container">
             <div class="grid">
-                <appCard />
+                <appCard v-for = 'card in brands' :card = 'card'></appCard>
             </div>
         </div>
     </div>
