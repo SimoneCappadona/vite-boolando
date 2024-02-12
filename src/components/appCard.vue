@@ -120,8 +120,8 @@ export default{
 
 <template>
     <div class="card" v-for="(brands,index) in brands" :key="brands.id">
-        <img :src="brands.image" alt="">
-        <img :src="brands.imageHover" alt="" class="hovederimg">
+        <img :src="brands.image" alt="" class="frontimg">
+        <img :src="brands.imageHover" alt="" class="hoveredimg">
         <div class="card-info">
             <p>{{ brands.brand }}</p>
             <h3>{{ brands.kind }}</h3>
@@ -139,11 +139,14 @@ export default{
     align-items: flex-start;
     gap: 4px;
 }
-.hovederimg{
+.hoveredimg{
     display: none;
 }
-.hovederimg:hover{
-    
+.frontimg:hover{
+    display: none;
+    width: 100%;
+}
+.hoveredimg:hover{
 }
 
 
