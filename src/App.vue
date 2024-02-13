@@ -9,6 +9,7 @@ export default {
       logo: "src/assets/img/boolean-logo.png",
       brands:[],
     };
+
   },
   created() {
     axios.get('http://localhost:3000/brands').then(( result )=>{

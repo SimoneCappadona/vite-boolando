@@ -1,23 +1,30 @@
 <script>
 import appCard from './appCard.vue'
-
 export default {
     components:{ appCard },
-      props: {brands: Array}
+      props: {brands: Array },
+      methods: {
+       print(card){
+        let discount = 0;
+        card.badges.array.forEach((badge) => {
+        if(badge.type == 'discount'){
+          discount = badge.value
+        }
+        });
+       }
     }
+  }  
 </script>
-
 
 <template>
      <div class="main">
         <div class="container">
             <div class="grid">
-                <appCard v-for = 'card in brands' :card = 'card'></appCard>
+                <appCard v-for = 'card in brands' :card = 'card' :badges="card.badges" @onClick="print" ></appCard>
             </div>
         </div>
     </div>
 </template>
-
 
 <style lang="scss" scoped>
 @use '../style/partials/variables.scss' as *;
