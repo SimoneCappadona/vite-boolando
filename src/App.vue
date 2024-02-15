@@ -1,8 +1,14 @@
 <script>
 import AppHeader from "./components/appHeader.vue";
+
 import AppMain from "./components/appMain.vue";
+
 import AppFooter from "./components/appFooter.vue";
+
+import appModal from "./components/appModal.vue";
+
 import axios from "axios";
+
 export default {
   data() {
     return {
@@ -16,7 +22,7 @@ export default {
       this.brands= result.data
     })
   },
-  components: {AppHeader, AppMain, AppFooter},
+  components: {AppHeader, AppMain, AppFooter,appModal},
 };
 </script>
 
@@ -24,7 +30,8 @@ export default {
   <AppHeader />
   <AppMain :brands="brands"></AppMain>
   <AppFooter />
-</template>
+  <appModal />
+  </template>
 
 <style lang="scss">
 @use "./style/general.scss";
