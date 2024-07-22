@@ -13,7 +13,7 @@ export default {
     </div>
     <div class="card-info">
       <p>{{ card.brand }}</p>
-      <h3 >{{ card.kind }}</h3>
+      <h3>{{ card.kind }}</h3>
       <small class="price">{{ card.price }} €</small>
     </div>
   </div>
@@ -27,16 +27,17 @@ export default {
   align-items: flex-start;
   gap: 4px;
 }
-
 .figure .hoveredimg {
   display: none;
   object-fit: cover;
   height: 505px;
-  opacity: 0;
+  cursor: pointer;
 }
+
 .figure:hover .frontimg {
   display: none;
 }
+
 .figure:hover .hoveredimg {
   opacity: 1;
   display: block;
@@ -47,4 +48,3 @@ export default {
   font-weight: bold;
 }
 </style>
-
